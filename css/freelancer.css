@@ -9814,8 +9814,8 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   margin: 0;
   transition: top 0.3s ease, opacity 0.3s ease;
-  /* vertical-align: middle;
-  vertical-align: baseline; */
+  vertical-align: middle;
+  vertical-align: baseline;
   opacity: 0;
 }
 
