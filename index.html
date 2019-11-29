@@ -229,45 +229,51 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
+          <form>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Name</label>
-                <input class="form-control" id="name" type="text" placeholder="Name" required="required"
-                  data-validation-required-message="Please enter your name.">
+                <label for="user-name">Name</label>
+                <input class="form-control" type="text" class="form-control" id="user-name" placeholder="Name"
+                  required="required">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Email Address</label>
-                <input class="form-control" id="email" type="email" placeholder="Email Address" required="required"
-                  data-validation-required-message="Please enter your email address.">
+                <label for="user-email">Email address</label>
+                <input type="email" class="form-control" id="user-email" placeholder="name@example.com"
+                  required="required">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Phone Number</label>
-                <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required"
-                  data-validation-required-message="Please enter your phone number.">
-                <p class="help-block text-danger"></p>
+                <input class="form-control" id="phone" type="tel" placeholder="Phone Number optional">
               </div>
             </div>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"
-                  data-validation-required-message="Please enter a message."></textarea>
-                <p class="help-block text-danger"></p>
+                <label for="message">Your two cents if you please</label><textarea class="form-control" id="message"
+                  placeholder="tips, advise, feedback appreciated, thanks" rows="5" required="required"></textarea>
               </div>
             </div>
+
             <br>
+
+            <!--SUBMIT BUTTON-->
+
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              <button type="submit" class="btn btn-primary btn-xl" id="send">Send</button>
             </div>
+
           </form>
+
         </div>
       </div>
 
@@ -295,7 +301,8 @@
           <!-- <a class="btn btn-outline-light btn-social mx-1" href="#">
             <i class="fab fa-fw fa-twitter"></i>
           </a> -->
-          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/marino-carranza-160a99177/" target="_blank">
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/marino-carranza-160a99177/"
+            target="_blank">
             <i class="fab fa-fw fa-linkedin-in"></i>
           </a>
           <!-- <a class="btn btn-outline-light btn-social mx-1" href="#">
@@ -357,7 +364,11 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/memory-game.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">The purpose of the game is keep track of the images clicked, when the user clicks on an image twice the game restarts. The app keeps track of the current score, every time the user clicks an image the score increases by 1. The current high score is displayed at all times. <br><a href="https://github.com/PMCarranza/memory-game" target="_blank">Take a look at the code</a><br><a href="https://pmcarranza.github.io/memory-game/" target="_blank">Click to play!</a><br></p>                
+                <p class="mb-5">The purpose of the game is keep track of the images clicked, when the user clicks on an
+                  image twice the game restarts. The app keeps track of the current score, every time the user clicks an
+                  image the score increases by 1. The current high score is displayed at all times. <br><a
+                    href="https://github.com/PMCarranza/memory-game" target="_blank">Take a look at the code</a><br><a
+                    href="https://pmcarranza.github.io/memory-game/" target="_blank">Click to play!</a><br></p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -397,7 +408,12 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/friend-finder.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">This is a full-stack app, it takes in the results from the users inputs, then compares their answers with those from other users. The app will then display the name and picture of the user with the best overall match. In this control enviroment case, the app will match the user with a greek god. In the future this app could help users connect with others who share their same interests and passions.<br><a href="https://github.com/PMCarranza/Friend-Finder" target="_blank">Take a look at the code</a><br><a href="https://olympic-finder.herokuapp.com/" target="_blank">Find a friend!</a></p>
+                <p class="mb-5">This is a full-stack app, it takes in the results from the users inputs, then compares
+                  their answers with those from other users. The app will then display the name and picture of the user
+                  with the best overall match. In this control enviroment case, the app will match the user with a greek
+                  god. In the future this app could help users connect with others who share their same interests and
+                  passions.<br><a href="https://github.com/PMCarranza/Friend-Finder" target="_blank">Take a look at the
+                    code</a><br><a href="https://olympic-finder.herokuapp.com/" target="_blank">Find a friend!</a></p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -437,7 +453,12 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/mResilience.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">mResilience Product Website aimed to give First Responders a quick overview of the program and mobile app. Representative users (first responder community members) need a quick way to access information about the mResilience program and a way to connect with the mResilience team directly regarding additional questions or requesting a demo.<br><a href="https://github.com/shenjune/mResilience" target="_blank">Take a look at the code</a><br><a href="https://shenjune.github.io/mResilience/" target="_blank">Lear more about it</a></p>
+                <p class="mb-5">mResilience Product Website aimed to give First Responders a quick overview of the
+                  program and mobile app. Representative users (first responder community members) need a quick way to
+                  access information about the mResilience program and a way to connect with the mResilience team
+                  directly regarding additional questions or requesting a demo.<br><a
+                    href="https://github.com/shenjune/mResilience" target="_blank">Take a look at the code</a><br><a
+                    href="https://shenjune.github.io/mResilience/" target="_blank">Lear more about it</a></p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -477,7 +498,13 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/da-burger.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">This full-stack app, allows the user to choose from existing burgers to be devoured and transfered them to the devoured "state", it also allows the users to "create" their own burger. New entries update the existing database, adding a row with an id, burger name and value of not devoured. In this control enviroment case, the app displays the created burger in the left hand side of the page along with those already in the database that have not been devoured.<br><a href="https://github.com/PMCarranza/burger" target="_blank">Take a look at the code</a><br><a href="https://want-fries.herokuapp.com/" target="_blank">Make your own!</a></p>
+                <p class="mb-5">This full-stack app, allows the user to choose from existing burgers to be devoured and
+                  transfered them to the devoured "state", it also allows the users to "create" their own burger. New
+                  entries update the existing database, adding a row with an id, burger name and value of not devoured.
+                  In this control enviroment case, the app displays the created burger in the left hand side of the page
+                  along with those already in the database that have not been devoured.<br><a
+                    href="https://github.com/PMCarranza/burger" target="_blank">Take a look at the code</a><br><a
+                    href="https://want-fries.herokuapp.com/" target="_blank">Make your own!</a></p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -518,8 +545,11 @@
                 <img class="img-fluid rounded mb-5" src="img/portfolio/nodejs.png" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5">The user has access to either songs, movies or concerts/performances.
-                  This app helps the user find out where and when artist/band are performing and can provide relevant information about movies/songs the user might want to find more about.
-                  This is a user driven app, to retrieve results the user needs to input the name of a movie, artist, song or band for the app to interact with the needed api and provide the requested information.<br><a href="https://github.com/PMCarranza/10-nodejs" target="_blank">Take a look at the code</a></p>
+                  This app helps the user find out where and when artist/band are performing and can provide relevant
+                  information about movies/songs the user might want to find more about.
+                  This is a user driven app, to retrieve results the user needs to input the name of a movie, artist,
+                  song or band for the app to interact with the needed api and provide the requested information.<br><a
+                    href="https://github.com/PMCarranza/10-nodejs" target="_blank">Take a look at the code</a></p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -559,8 +589,14 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/trivia-game.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">This is multiple selection game, the user reads the question and has four possible answers; if the user chooses correctly a message is displayed confirming the answer, if the answer is wrong, the user will know. In either case after a few seconds the next question will be displayed until the last question is reached. The question runs on a timer, if the user runs out of time a message is displayed notifying what happened.
-                  After the last question has been answered a window with the final results will be displayed.<br><a href="https://github.com/PMCarranza/TriviaGame" target="_blank">Take a look at the code</a><br><a href="https://pmcarranza.github.io/TriviaGame/" target="_blank">Play the game!</a></p>
+                <p class="mb-5">This is multiple selection game, the user reads the question and has four possible
+                  answers; if the user chooses correctly a message is displayed confirming the answer, if the answer is
+                  wrong, the user will know. In either case after a few seconds the next question will be displayed
+                  until the last question is reached. The question runs on a timer, if the user runs out of time a
+                  message is displayed notifying what happened.
+                  After the last question has been answered a window with the final results will be displayed.<br><a
+                    href="https://github.com/PMCarranza/TriviaGame" target="_blank">Take a look at the code</a><br><a
+                    href="https://pmcarranza.github.io/TriviaGame/" target="_blank">Play the game!</a></p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -575,19 +611,20 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+  <!-- <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script> -->
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="./mail/javascript.js"></script>
 
 </body>
 
