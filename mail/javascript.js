@@ -8,7 +8,7 @@ var comments;
 function contact() {
     name = $('#user-name').val().trim();
     emailAddress = $('#user-email').val().trim();
-    phone = $('#user-phone').val().trim();
+    // phone = $('#phone').val().trim();
     comments = $('#message').val().trim();
 };
 
@@ -28,7 +28,6 @@ function validateEmail(cb) {
             // console.log(json.smtp_check);
             // console.log(json.score);
             // cb(format_valid, smtp_check)
-            console.log(json);
             return json
         }
     });
@@ -38,8 +37,6 @@ function validateEmail(cb) {
 $('#send').on('click', async function (stop) {
     stop.preventDefault();
     contact();
-
-console.log('name -> ', name, 'email-> ', emailAddress, 'comments-> ', comments);
 
     var validate = await validateEmail();
     // console.log(validate)
@@ -61,6 +58,7 @@ console.log('name -> ', name, 'email-> ', emailAddress, 'comments-> ', comments)
         )}else {
         alert('Please provide valid email');    // when email is invalid
     };
+    $('#contact-form').trigger("reset");
 });
     // code source can be found here: https://www.smtpjs.com/
     // code with encryption available
