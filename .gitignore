@@ -1,0 +1,5 @@
+#what follows will be kept hidden from public eyes
+
+node_modules
+.DS_Store
+.env

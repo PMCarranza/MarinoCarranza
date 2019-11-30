@@ -1,8 +1,7 @@
-// 'use strict';
-console.log('conectado');
 var name;
 var emailAddress;
 var comments;
+
 
 // function to gather the contact info
 function contact() {
@@ -22,12 +21,7 @@ function validateEmail(cb) {
         url: 'https://apilayer.net/api/check?access_key=' + access_key + '&email=' + emailAddress,
         dataType: 'jsonp',
         success: function (json) {
-            // console.log(json);
-            // Access and use your preferred validation result objects
-            // console.log(json.format_valid);
-            // console.log(json.smtp_check);
-            // console.log(json.score);
-            // cb(format_valid, smtp_check)
+
             return json
         }
     });
@@ -39,16 +33,24 @@ $('#send').on('click', async function (stop) {
     contact();
 
     var validate = await validateEmail();
-    // console.log(validate)
     const { format_valid, smtp_check } = validate;
 
     // if validEmail is true, alert to the user, enter in a valid email
     if (smtp_check === true && format_valid === true) {
+        
+
+        // Email.send({
+        //     SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+        //     To : 'them@website.com',
+        //     From : "you@isp.com",
+        //     Subject : "This is the subject",
+        //     Body : "And this is the body"
+        // }).then(
+        //   message => alert(message)
+        // );
 
         Email.send({
-            Host: 'smtp25.elasticemail.com',
-            Username: 'marinocarranza@hotmail.com',  
-            Password: 'a5b01d0e-fdfe-4593-8205-cb8f0d332406',  
+            SecureToken: '365a37f7-4429-474a-8c2f-7c3f3036cf43',
             To: 'marino.carranza@gmail.com',    //my preferred email
             From: 'marinocarranza@hotmail.com',  //user input
             Subject: `${name} PORTFOLIO feedback`,    // user input
